@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "antd": "^3.4.4",
+    "classnames": "^2.2.5",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-router": "^4.2.0",
@@ -22,6 +25,7 @@
     "lint-js": "eslint **/*.{js,jsx} --fix",
     "lint-scss": "stylelint --syntax scss \"src/**/*.scss\"",
     "lint": "npm-run-all lint-js lint-scss",
+    "flow": "flow",
     "precommit": "lint-staged"
   },
   "devDependencies": {
@@ -37,6 +41,7 @@
     "eslint-plugin-markdown": "^1.0.0-beta.6",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
+    "flow-bin": "^0.71.0",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.5",
     "node-sass-chokidar": "^1.2.2",
@@ -44,6 +49,7 @@
     "prettier": "^1.12.1",
     "react-app-rewire-less": "^2.1.1",
     "react-app-rewired": "^1.5.2",
+    "react-test-renderer": "^16.3.2",
     "stylelint": "^9.2.0",
     "stylelint-config-recommended-scss": "^3.2.0",
     "stylelint-config-standard": "^18.2.0"
@@ -52,7 +58,14 @@
     "setupTestFrameworkScriptFile": "<rootDir>src/setupTests.js"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx}": ["prettier --write", "eslint **/*.{js,jsx} --fix", "git add"],
-    "src/**/*.{scss}": ["stylelint --syntax scss \"src/**/*.scss\"", "git add"]
+    "src/**/*.{js,jsx}": [
+      "prettier --write",
+      "eslint **/*.{js,jsx} --fix",
+      "git add"
+    ],
+    "src/**/*.{scss}": [
+      "stylelint --syntax scss \"src/**/*.scss\"",
+      "git add"
+    ]
   }
 }
