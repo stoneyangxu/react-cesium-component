@@ -1,25 +1,21 @@
 const eslintrc = {
-  extends: ['eslint-config-airbnb'],
+  extends: ['eslint-config-airbnb', 'prettier'],
   env: {
     browser: true,
     node: true,
     jasmine: true,
     jest: true,
-    es6: true,
+    es6: true
   },
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 6,
     ecmaFeatures: {
       jsx: true,
-      experimentalObjectRestSpread: true,
-    },
+      experimentalObjectRestSpread: true
+    }
   },
-  plugins: [
-    'markdown',
-    'react',
-    'babel',
-  ],
+  plugins: ['markdown', 'react', 'babel', 'prettier'],
   rules: {
     'func-names': 0,
     'arrow-body-style': 0,
@@ -45,15 +41,15 @@ const eslintrc = {
     'comma-dangle': ['error', 'always-multiline'],
     'function-paren-newline': 0,
     'object-curly-newline': 0,
-    'no-restricted-globals': 0,
-  },
+    'no-restricted-globals': 0
+  }
 };
 
 if (process.env.RUN_ENV === 'DEMO') {
   eslintrc.globals = {
     React: true,
     ReactDOM: true,
-    mountNode: true,
+    mountNode: true
   };
 
   Object.assign(eslintrc.rules, {
@@ -66,7 +62,7 @@ if (process.env.RUN_ENV === 'DEMO') {
     'react/no-multi-comp': 0,
     'react/prefer-stateless-function': 0,
     'jsx-a11y/href-no-hash': 0,
-    'import/newline-after-import': 0,
+    'import/newline-after-import': 0
   });
 }
 
