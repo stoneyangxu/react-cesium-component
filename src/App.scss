@@ -1,0 +1,22 @@
+.root {
+  min-height: 100%;
+}
+
+.app-main {
+  height: 100vh;
+
+
+  .ant-layout-sider {
+    background-color: #fff;
+
+    .ant-layout-sider-trigger {
+      background-color: #fff;
+      color: black;
+    }
+  }
+
+  .content-main {
+    margin: 16px;
+    background-color: #fff;
+  }
+}
