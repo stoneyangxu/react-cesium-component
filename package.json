@@ -52,8 +52,7 @@
     "setupTestFrameworkScriptFile": "<rootDir>src/setupTests.js"
   },
   "lint-staged": {
-    "src/**/*.{js,json,css,md}": ["prettier --write", "git add"],
-    "src/**/*.{js,jsx}": ["eslint **/*.{js,jsx} --fix", "git add"],
+    "src/**/*.{js,jsx}": ["prettier --write", "eslint **/*.{js,jsx} --fix", "git add"],
     "src/**/*.{scss}": ["stylelint --syntax scss \"src/**/*.scss\"", "git add"]
   }
 }
