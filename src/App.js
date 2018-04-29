@@ -4,6 +4,7 @@ import { Route, Link, Switch } from 'react-router-dom';
 
 import Home from './home';
 import About from './about';
+import Basic from './basic/Basic';
 
 import './App.css';
 
@@ -31,7 +32,9 @@ const App = () => (
           <Menu.Item key="1">
             <Link to="/">Home</Link>
           </Menu.Item>
-          <Menu.Item key="2">Option 2</Menu.Item>
+          <Menu.Item key="2">
+            <Link to="/basic">Basic</Link>
+          </Menu.Item>
         </SubMenu>
         <SubMenu
           key="sub2"
@@ -67,6 +70,7 @@ const App = () => (
     <Content className="content-main">
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/basic" component={Basic} />
         <Route path="/about" component={About} />
       </Switch>
     </Content>
