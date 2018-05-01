@@ -51,17 +51,18 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <AutoComplete
-        allowClear
-        className="location-search"
-        style={{ width: '100%' }}
-        dataSource={this.state.dataSource.map(renderOption)}
-        onSelect={this.onSelect}
-        onChange={this.onChange}
-        optionLabelProp="text"
-      >
-        <Input placeholder="input" prefix={<Icon type="search" />} />
-      </AutoComplete>
+      <div className="location-search">
+        <AutoComplete
+          allowClear
+          style={{ width: '100%' }}
+          dataSource={this.state.dataSource.map(renderOption)}
+          onSelect={this.onSelect}
+          onChange={this.onChange}
+          optionLabelProp="text"
+        >
+          <Input placeholder="input" prefix={<Icon type="search" />} />
+        </AutoComplete>
+      </div>
     );
   }
 }

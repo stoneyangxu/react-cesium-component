@@ -7,12 +7,13 @@ import About from './about';
 import Basic from './basic/Basic';
 
 import ViewControl from './components/viewControl';
-
-import './App.css';
 import WithViewControl from './basic/WithViewControl';
 import WithToolbar from './basic/WithToolbar';
+import WithSearchbar from './basic/WithSearchbar';
 import Toolbar from './components/toolbar';
 import { SearchBar } from './components/searchBar';
+
+import './App.css';
 
 const { Sider, Content } = Layout;
 const SubMenu = Menu.SubMenu;
@@ -46,6 +47,9 @@ const App = () => (
           </Menu.Item>
           <Menu.Item key="withToolbar">
             <Link to="/withToolbar">WithToolbar</Link>
+          </Menu.Item>
+          <Menu.Item key="withSearchbar">
+            <Link to="/withSearchbar">WithSearchbar</Link>
           </Menu.Item>
         </SubMenu>
         <SubMenu
@@ -95,6 +99,7 @@ const App = () => (
         <Route exact path="/basic" component={Basic} />
         <Route exact path="/withViewControl" component={WithViewControl} />
         <Route exact path="/withToolbar" component={WithToolbar} />
+        <Route exact path="/withSearchbar" component={WithSearchbar} />
         <Route exact path="/components/viewControl" component={ViewControl} />
         <Route exact path="/components/toolbar" component={Toolbar} />
         <Route exact path="/components/searchbar" component={SearchBar} />
