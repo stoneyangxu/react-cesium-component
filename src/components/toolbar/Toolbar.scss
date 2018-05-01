@@ -1,0 +1,48 @@
+.toolbar {
+  .ant-menu-item, .ant-menu-submenu-title, .ant-menu-submenu {
+    padding: 0;
+    margin: 2px;
+    border-bottom: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    background: #fff;
+    font-size: 20px;
+    border-radius: .2em;
+
+    &:hover {
+      border-bottom: 0;
+      background-color: #fff;
+    }
+
+    &:active {
+      border-bottom: 0;
+    }
+  }
+
+  .ant-menu-submenu {
+    border-bottom: 0;
+  }
+
+  .ant-menu-submenu-open {
+    border-bottom: 0;
+  }
+
+  .ant-menu-submenu:hover {
+    border-bottom: 0;
+  }
+
+  .ant-menu-item .anticon, .ant-menu-submenu-title .anticon {
+    margin: auto;
+  }
+}
+
+.ant-menu-horizontal {
+  border-bottom: 0;
+  display: inline-block;
+  line-height: 24px;
+  background: transparent;
+}

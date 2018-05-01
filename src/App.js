@@ -6,7 +6,12 @@ import Home from './home';
 import About from './about';
 import Basic from './basic/Basic';
 
+import ViewControl from './components/viewControl';
+
 import './App.css';
+import WithViewControl from './basic/WithViewControl';
+import WithToolbar from './basic/WithToolbar';
+import Toolbar from './components/toolbar';
 
 const { Sider, Content } = Layout;
 const SubMenu = Menu.SubMenu;
@@ -29,11 +34,17 @@ const App = () => (
             </span>
           }
         >
-          <Menu.Item key="1">
+          <Menu.Item key="home">
             <Link to="/">Home</Link>
           </Menu.Item>
-          <Menu.Item key="2">
+          <Menu.Item key="basic">
             <Link to="/basic">Basic</Link>
+          </Menu.Item>
+          <Menu.Item key="withViewControl">
+            <Link to="/withViewControl">WithViewControl</Link>
+          </Menu.Item>
+          <Menu.Item key="withToolbar">
+            <Link to="/withToolbar">WithToolbar</Link>
           </Menu.Item>
         </SubMenu>
         <SubMenu
@@ -57,11 +68,16 @@ const App = () => (
           title={
             <span>
               <Icon type="setting" />
-              <span>Navigation Three</span>
+              <span>Components</span>
             </span>
           }
         >
-          <Menu.Item key="9">
+          <Menu.Item key="viewControl">
+            <Link to="/components/viewControl">View Control</Link>
+            <Link to="/components/toolbar">Toolbar</Link>
+          </Menu.Item>
+
+          <Menu.Item key="about">
             <Link to="/about">About</Link>
           </Menu.Item>
         </SubMenu>
@@ -71,6 +87,10 @@ const App = () => (
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/basic" component={Basic} />
+        <Route exact path="/withViewControl" component={WithViewControl} />
+        <Route exact path="/withToolbar" component={WithToolbar} />
+        <Route exact path="/components/viewControl" component={ViewControl} />
+        <Route exact path="/components/toolbar" component={Toolbar} />
         <Route path="/about" component={About} />
       </Switch>
     </Content>

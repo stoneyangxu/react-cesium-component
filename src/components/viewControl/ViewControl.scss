@@ -1,0 +1,69 @@
+$unit-length: percentage(1 / 4);
+
+.view-control {
+  display: inline-block;
+  position: relative;
+
+  .control-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    position: absolute;
+    cursor: pointer;
+    background-color: rgba(47,53,60,.8);
+    color: #fff;
+
+    &:hover {
+      color: #1890ff;
+      font-weight: 900;
+    }
+
+    &:active {
+      color: #fff;
+    }
+  }
+
+
+  .move-left {
+    top: $unit-length;
+    left: 0;
+    width: $unit-length;
+    height: 2 * $unit-length;
+  }
+
+  .move-right {
+    top: $unit-length;
+    right: 0;
+    width: $unit-length;
+    height: 2 * $unit-length;
+  }
+
+  .move-up {
+    top: 0;
+    left: $unit-length;
+    width: 2 * $unit-length;
+    height: $unit-length;
+  }
+
+  .move-down {
+    bottom: 0;
+    left: $unit-length;
+    width: 2 * $unit-length;
+    height: $unit-length;
+  }
+
+  .zoom-in {
+    top: $unit-length;
+    left: $unit-length;
+    width: 2 * $unit-length;
+    height: $unit-length;
+  }
+
+  .zoom-out {
+    bottom: $unit-length;
+    left: $unit-length;
+    width: 2 * $unit-length;
+    height: $unit-length;
+  }
+}
